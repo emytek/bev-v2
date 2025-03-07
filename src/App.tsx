@@ -66,7 +66,7 @@ export default function App() {
       </Router>
 
       {promptVisible && (
-        <button onClick={showInstallPrompt}>
+        <button onClick={showInstallPrompt} className="p-4">
           Install PWA
         </button>
       )}
