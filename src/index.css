@@ -67,6 +67,9 @@ layer(base);
   --color-blue-light-900: #0b4a6f;
   --color-blue-light-950: #062c41;
 
+  --color-red-500: #D2122E;
+  --color-black-500: #1B1212;
+
   --color-gray-25: #fcfcfd;
   --color-gray-50: #f9fafb;
   --color-gray-100: #f2f4f7;
@@ -136,6 +139,8 @@ layer(base);
   --color-theme-pink-500: #ee46bc;
 
   --color-theme-purple-500: #7a5af8;
+
+
 
   --shadow-theme-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
     0px 2px 4px -2px rgba(16, 24, 40, 0.06);

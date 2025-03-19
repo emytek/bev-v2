@@ -13,7 +13,7 @@
         "sizes": "96x96"
       },
       {
-        "src": "/images/logo/wyze-144.png",
+        "src": "/images/logo/wyze_144.png",
         "type": "image/png",
         "sizes": "144x144",
         "purpose": "any"
@@ -43,7 +43,7 @@
     ],
     "screenshots": [
       {
-        "src": "/images/screenshots/scr-wide.png",
+        "src": "/images/screenshots/screen-wide.png",
         "type": "image/png",
         "sizes": "1280x800",
         "form_factor": "wide"

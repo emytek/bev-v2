@@ -91,7 +91,7 @@ const AppHeader: React.FC = () => {
             />
             <img
               className="hidden dark:block w-16 sm:w-20 md:w-24"
-              src="./images/logo/logo-dark.svg"
+              src="./images/logo/wyze.png"
               alt="Logo"
             />
           </Link>

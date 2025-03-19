@@ -1,0 +1,123 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "username": "janesmith",
+      "password": "password456",
+      "role": "user"
+    },
+    {
+      "id": "2566",
+      "name": "Jezron Nemmy",
+      "email": "jezron@example.com",
+      "username": "jezron",
+      "password": "password789",
+      "role": "user"
+    },
+    {
+      "id": "eec5",
+      "name": "Jey Johnson",
+      "email": "jey.johnson@example.com",
+      "username": "jeyjohnson",
+      "password": "password789",
+      "role": "user"
+    },
+    {
+      "id": "7",
+      "name": "Kay Colt",
+      "email": "kay@example.com",
+      "username": "kaycee",
+      "password": "password123",
+      "role": "user"
+    },
+    {
+      "id": "9",
+      "name": "Mike Hill",
+      "email": "mike@example.com"
+    },
+    {
+      "id": "10",
+      "name": "Luke Harper",
+      "email": "luke@example.com"
+    },
+    {
+      "id": "11",
+      "name": "Dave Chester",
+      "email": "dave@example.com"
+    },
+    {
+      "id": "12",
+      "name": "Luther Collins",
+      "email": "luther@example.com",
+      "username": "kaycee",
+      "password": "password123",
+      "role": "user"
+    },
+    {
+      "id": "4afe",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    
+    {
+        "id": "15",
+        "name": "karen",
+        "email": "karen@example.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "React Basics",
+      "content": "This is an introductory post about React.js.",
+      "userId": 1,
+      "createdAt": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Advanced Redux Patterns",
+      "content": "In this post, we explore some advanced Redux patterns.",
+      "userId": 2,
+      "createdAt": "2025-03-11T14:30:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Next js Basics",
+      "content": "This is an introductory post about Next.js.",
+      "userId": 1,
+      "createdAt": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Understanding React Hooks",
+      "content": "This post explains how React Hooks work and how to use them effectively.",
+      "userId": 3,
+      "createdAt": "2025-03-12T08:45:00Z"
+    },
+    {
+      "id": "10",
+      "title": "Learning Auth",
+      "content": "This is a post about authentication.",
+      "userId": 1,
+      "createdAt": "2025-03-11T10:00:00Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "userId": 2,
+      "content": "Great post! I learned a lot.",
+      "createdAt": "2025-03-10T11:00:00Z"
+    },
+    {
+      "id": "2",
+      "postId": 2,
+      "userId": 1,
+      "content": "Thanks for the insightful content!",
+      "createdAt": "2025-03-11T15:00:00Z"
+    }
+  ]
+}

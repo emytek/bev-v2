@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignIn from "./pages/AuthPages/SignIn";
 import SignUp from "./pages/AuthPages/SignUp";
 import NotFound from "./pages/OtherPage/NotFound";
@@ -19,14 +19,26 @@ import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import useInstallPrompt from "./hooks/useInstallPrompt";
+import ApiTest from "./components/ApiTest";
+import Notifications from "./components/Notifications";
+// import { fetchDataWithCache } from "./services/axiosService";
+import { useLocalNotification } from "./hooks/useLocalNotification";
+import { usePushNotifications } from "./hooks/usePushNotifications";
+import { useEffect, useState } from "react";
+import BarcodeScanner from "./components/BarcodeScanner";
 
 export default function App() {
   const { promptVisible, showInstallPrompt } = useInstallPrompt();
+  const [scannedCode, setScannedCode] = useState<string | null>(null);
+
+  useLocalNotification();
+  usePushNotifications();
 
   return (
     <>
       <Router>
         <ScrollToTop />
+        <Notifications />
         <Routes>
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
@@ -70,6 +82,25 @@ export default function App() {
           Install PWA
         </button>
       )}
+      <ApiTest />
+
+      <div className="p-4">
+      <h1 className="text-xl font-bold mb-4">Barcode Scanner</h1>
+      
+      {!scannedCode ? (
+        <BarcodeScanner onScan={setScannedCode} onError={(err) => console.error(err)} />
+      ) : (
+        <div className="p-4 bg-green-200 rounded-md">
+          <p>Scanned Code: {scannedCode}</p>
+          <button
+            onClick={() => setScannedCode(null)}
+            className="mt-2 px-4 py-2 bg-blue-600 text-white rounded"
+          >
+            Scan Again
+          </button>
+        </div>
+      )}
+    </div>
     </>
   );
 }

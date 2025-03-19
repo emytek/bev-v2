@@ -303,30 +303,28 @@ const AppSidebar: React.FC = () => {
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
         }`}
       >
-        <Link to="/">
+        <Link
+          to="/"
+          // className="hidden sm:block"
+        >
           {isExpanded || isHovered || isMobileOpen ? (
             <>
               <img
-                className="dark:hidden"
+                className="dark:hidden w-[45px] h-[20px] lg:w-[80px] lg:h-[40px]"
                 src="/images/logo/wyze.png"
                 alt="Logo"
-                width={120}
-                height={40}
               />
               <img
-                className="hidden dark:block"
+                className="hidden dark:block w-[45px] h-[20px] lg:w-[80px] lg:h-[40px]"
                 src="/images/logo/wyze.png"
                 alt="Logo"
-                width={120}
-                height={40}
               />
             </>
           ) : (
             <img
+              className="w-[45px] h-[20px] lg:w-[80px] lg:h-[40px]"
               src="/images/logo/wyze.png"
               alt="Logo"
-              width={32}
-              height={32}
             />
           )}
         </Link>

@@ -1,4 +1,8 @@
+import useInstallPrompt from "../hooks/useInstallPrompt";
+
 export default function SidebarWidget() {
+  const { showInstallPrompt } = useInstallPrompt();
+
   return (
     <div
       className={`
@@ -10,14 +14,25 @@ export default function SidebarWidget() {
       <p className="mb-4 text-gray-500 text-theme-sm dark:text-gray-400">
         Leading Tailwind CSS Admin Template with 400+ UI Component and Pages.
       </p>
+      <div className="flex gap-4 flex-col">
+
+      {/* {promptVisible && (   */}
+      <a
+        onClick={showInstallPrompt}
+        className="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-red-500 text-theme-sm hover:bg-brand-600"
+      >
+        Install Bevcan v1
+      </a>
+      {/* )} */}
       <a
         href="https://tailadmin.com/pricing"
         target="_blank"
         rel="nofollow"
-        className="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-brand-500 text-theme-sm hover:bg-brand-600"
+        className="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-black-500 text-theme-sm hover:bg-brand-600"
       >
         Purchase Plan
       </a>
+      </div>
     </div>
   );
 }
